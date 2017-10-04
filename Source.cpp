@@ -4,8 +4,6 @@
 #include <windows.h>
 #include <dwmapi.h>
 
-TCHAR szClassName[] = TEXT("Window");
-
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
 	static HTHUMBNAIL thumbnail;
@@ -42,6 +40,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPreInst, LPSTR pCmdLine, int nCmdShow)
 {
+	TCHAR szClassName[] = TEXT("Window");
 	MSG msg;
 	WNDCLASS wndclass = {
 		CS_HREDRAW | CS_VREDRAW,
